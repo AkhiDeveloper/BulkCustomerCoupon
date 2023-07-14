@@ -20,7 +20,7 @@ namespace BulkCustomerCoupon.Console.APIClient
         {
             try
             {
-                var body = new { CustomerId = customerId, Remark = String.Empty };
+                var body = new { CustomerId = customerId, SchemeId="50", CouponTypeId="3", IsAlreadyRecharged=true, Remark = String.Empty };
                 var request = new RestRequest("PPVCoupon/Create").AddJsonBody(body);
                 await _client.PostAsync(request);
                 return true;

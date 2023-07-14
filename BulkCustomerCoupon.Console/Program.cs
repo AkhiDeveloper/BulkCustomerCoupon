@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Oracle.ManagedDataAccess.Client;
 
 var testConnectionString = "Data Source=localhost;initial catalog=Coupon;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
-var oracleConnectionString = "Provider=OraOLEDB.Oracle;Data Source=192.168.20.123:1521;User Id=hikmat;Password=hikmat;";
+var oracleConnectionString = "User Id=hikmat;Password=hikmat;Data Source=192.168.20.123:1521/orcl;Connect Timeout=60";
 var serviceProvider = new ServiceCollection()
             .AddDbContext<SqlServerDbContext>(opts => opts.UseSqlServer(testConnectionString))
             .AddDbContext<OracleDBContext>(opts => opts.UseOracle(oracleConnectionString))
