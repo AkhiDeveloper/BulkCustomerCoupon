@@ -18,21 +18,21 @@ namespace BulkCustomerCoupon.Console.Data
         }
 
         public DbSet<CouponTypeFromDeno> CouponTypeFromDenos { get; set; }
-        public DbSet<PPVCustomer> PPVCustomers { get; set; }
+        public DbSet<tbl_rch_coupun_all> PPVCustomers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PPVCustomer>().ToTable("tbl_rch_coupun_all");
-            modelBuilder.Entity<PPVCustomer>().Property(p => p.CustomerId)
+            modelBuilder.Entity<tbl_rch_coupun_all>().ToTable("tbl_rch_coupun_all");
+            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.CustomerId)
                 .HasColumnName("CUSTOMER_ID");
-            modelBuilder.Entity<PPVCustomer>().Property(p => p.Deno)
+            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.Deno)
                 .HasColumnName("BASE_AMOUNT");
-            modelBuilder.Entity<PPVCustomer>().Property(p => p.CreatedDateTime)
+            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.CreatedDateTime)
                 .HasColumnName("CREATE_DATETIME")
                 .HasColumnType("DATE");
-            modelBuilder.Entity<PPVCustomer>().Property(p => p.IsCouponCreated)
+            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.IsCouponCreated)
                 .HasColumnName("IS_COUPON_CREATED");
-            modelBuilder.Entity<PPVCustomer>().Property(p => p.InvoicLineText)
+            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.InvoicLineText)
                 .HasColumnName("INVOICE_LINE_TEXT");
             base.OnModelCreating(modelBuilder);
         }

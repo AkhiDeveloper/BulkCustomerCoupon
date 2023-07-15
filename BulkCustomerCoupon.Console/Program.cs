@@ -19,7 +19,7 @@ if(!isConnected)
     Console.WriteLine("Failed to connect with database.");
     return;
 }
-IList<PPVCustomer> ppvCustomers = new List<PPVCustomer>();
+IList<tbl_rch_coupun_all> ppvCustomers = new List<tbl_rch_coupun_all>();
 
 //var ppvCustomersGroup = await sqlServerDbContext.PPVCustomers.GroupBy(x => x.CustomerId).ToListAsync();
 
