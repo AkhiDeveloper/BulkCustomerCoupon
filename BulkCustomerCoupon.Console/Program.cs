@@ -13,7 +13,11 @@ var serviceProvider = new ServiceCollection()
 var sqlServerDbContext = serviceProvider.GetService<SqlServerDbContext>();
 var oracleDbContext = serviceProvider.GetService<OracleDBContext>();
 
-//var isConnected = oracleDbContext.Database.CanConnect();
+var isConnected = oracleDbContext.Database.CanConnect();
+if(!isConnected)
+{
+    Console.WriteLine("Failed to connect with database.");
+}
 IList<PPVCustomer> ppvCustomers = new List<PPVCustomer>();
 
 //var ppvCustomersGroup = await sqlServerDbContext.PPVCustomers.GroupBy(x => x.CustomerId).ToListAsync();
