@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace BulkCustomerCoupon.Console.Data.Models
 {
-    [Table("CouponTypeFromDenos")]
     public class CouponTypeFromDeno
     {
         [Key]

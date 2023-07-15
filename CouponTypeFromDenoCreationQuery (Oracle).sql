@@ -13,65 +13,64 @@ MODIFY (CouponType INT NOT NULL);
 
 ALTER TABLE tbl_rch_coupun_all ADD IS_COUPON_CREATED NUMBER(1,0);
 
-INSERT INTO CouponTypeFromDenos (Deno, CouponType)
-VALUES
-  (1200, 1),
-  (1425, 1),
-  (1500, 1),
-  (2100, 1),
-  (2699, 1),
-  (1725, 1),
-  (2325, 1),
-  (2925, 1),
-  (1800, 1),
-  (2400, 1),
-  (2999, 1),
-  (3599, 1),
-  (1350, 1),
-  (1575, 1),
-  (1800, 1),
-  (2400, 1),
-  (2999, 1),
-  (3599, 1),
-  (1725, 1),
-  (1500, 1),
-  (2399, 3),
-  (2850, 3),
-  (3000, 3),
-  (4200, 3),
-  (5400, 3),
-  (3450, 3),
-  (4650, 3),
-  (5850, 3),
-  (3600, 3),
-  (4800, 3),
-  (6000, 3),
-  (7200, 3),
-  (2700, 3),
-  (3150, 3),
-  (3600, 3),
-  (4800, 3),
-  (6000, 3),
-  (7200, 3),
-  (3450, 3),
-  (3000, 3),
-  (4800, 5),
-  (5700, 5),
-  (5999, 5),
-  (8400, 5),
-  (10800, 5),
-  (6900, 5),
-  (9300, 5),
-  (11700, 5),
-  (7200, 5),
-  (9600, 5),
-  (11999, 5),
-  (14400, 5),
-  (5400, 5),
-  (6300, 5),
-  (7200, 5),
-  (9600, 5),
-  (11999, 5),
-  (14400, 5),
-  (6900, 5),
-  (5999, 5);
+-- Insert data
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1200, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1425, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1500, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2100, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2699, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1725, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2325, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2925, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1800, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2400, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2999, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3599, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1350, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1575, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1800, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2400, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2999, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3599, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1725, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (1500, 1);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2399, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2850, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3000, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (4200, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (5400, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3450, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (4650, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (5850, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3600, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (4800, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (6000, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (7200, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (2700, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3150, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3600, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (4800, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (6000, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (7200, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3450, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (3000, 3);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (4800, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (5700, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (5999, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (8400, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (10800, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (6900, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (9300, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (11700, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (7200, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (9600, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (11999, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (14400, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (5400, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (6300, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (7200, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (9600, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (11999, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (14400, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (6900, 5);
+INSERT INTO CouponTypeFromDenos (Deno, CouponType) VALUES (5999, 5);

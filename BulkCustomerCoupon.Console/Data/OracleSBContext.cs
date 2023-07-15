@@ -18,21 +18,31 @@ namespace BulkCustomerCoupon.Console.Data
         }
 
         public DbSet<CouponTypeFromDeno> CouponTypeFromDenos { get; set; }
-        public DbSet<tbl_rch_coupun_all> PPVCustomers { get; set; }
+        public DbSet<PPVCustomer> PPVCustomers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<tbl_rch_coupun_all>().ToTable("tbl_rch_coupun_all");
-            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.CustomerId)
+            //CouponTypeFromDeno Table mapping config
+            modelBuilder.Entity<CouponTypeFromDeno>().ToTable("COUPONTYPEFROMDENOS");
+            modelBuilder.Entity<CouponTypeFromDeno>().HasKey(x => x.Id);
+            modelBuilder.Entity<CouponTypeFromDeno>().Property(x =>x.Id).HasColumnName("ID");
+            modelBuilder.Entity<CouponTypeFromDeno>().Property(x => x.Deno).HasColumnName("DENO");
+            modelBuilder.Entity<CouponTypeFromDeno>().Property(x => x.CouponType).HasColumnName("COUPONTYPE");
+            modelBuilder.Entity<PPVCustomer>().ToTable("TBL_RCH_COUPUN_ALL");
+
+            //PPVCustomer Table mapping config
+            modelBuilder.Entity<PPVCustomer>().HasKey(x => x.Id);
+            modelBuilder.Entity<PPVCustomer>().Property(x => x.Id).HasColumnName("ID");
+            modelBuilder.Entity<PPVCustomer>().Property(p => p.CustomerId)
                 .HasColumnName("CUSTOMER_ID");
-            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.Deno)
+            modelBuilder.Entity<PPVCustomer>().Property(p => p.Deno)
                 .HasColumnName("BASE_AMOUNT");
-            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.CreatedDateTime)
+            modelBuilder.Entity<PPVCustomer>().Property(p => p.CreatedDateTime)
                 .HasColumnName("CREATE_DATETIME")
                 .HasColumnType("DATE");
-            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.IsCouponCreated)
+            modelBuilder.Entity<PPVCustomer>().Property(p => p.IsCouponCreated)
                 .HasColumnName("IS_COUPON_CREATED");
-            modelBuilder.Entity<tbl_rch_coupun_all>().Property(p => p.InvoicLineText)
+            modelBuilder.Entity<PPVCustomer>().Property(p => p.InvoicLineText)
                 .HasColumnName("INVOICE_LINE_TEXT");
             base.OnModelCreating(modelBuilder);
         }

@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 var testConnectionString = "Data Source=localhost;initial catalog=Coupon;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
-var oracleConnectionString = "User Id=hikmat;Password=hikmat;Data Source=192.168.20.123:1521/orcl;Connect Timeout=60";
+var oracleConnectionString = "User Id=system;Password=12345;Data Source=localhost:1521/free;Connect Timeout=60";
+//var oracleConnectionString = "User Id=hikmat;Password=hikmat;Data Source=192.168.20.123:1521/orcl;Connect Timeout=60";
 var serviceProvider = new ServiceCollection()
             .AddDbContext<SqlServerDbContext>(opts => opts.UseSqlServer(testConnectionString))
             .AddDbContext<OracleDBContext>(opts => opts.UseOracle(oracleConnectionString))
@@ -19,7 +20,8 @@ if(!isConnected)
     Console.WriteLine("Failed to connect with database.");
     return;
 }
-IList<tbl_rch_coupun_all> ppvCustomers = new List<tbl_rch_coupun_all>();
+var x = oracleDbContext.CouponTypeFromDenos.ToList();
+IList<PPVCustomer> ppvCustomers = new List<PPVCustomer>();
 
 //var ppvCustomersGroup = await sqlServerDbContext.PPVCustomers.GroupBy(x => x.CustomerId).ToListAsync();
 
