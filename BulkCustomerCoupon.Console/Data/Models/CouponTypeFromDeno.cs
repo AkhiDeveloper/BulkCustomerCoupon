@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace BulkCustomerCoupon.Console.Data.Models
 {
-    public class PPVCustomer
+    [Table("CouponTypeFromDenos")]
+    public class CouponTypeFromDeno
     {
         [Key]
         public int Id { get; set; }
-        public string CustomerId { get; set; }
         public int Deno { get; set; }
-        public DateTime CreatedDateTime { get; set; }
-        public bool? IsCouponCreated { get; set; }
+        public int CouponType { get; set; }
     }
 }

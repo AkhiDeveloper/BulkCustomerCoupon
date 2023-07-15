@@ -18,5 +18,6 @@ namespace BulkCustomerCoupon.Console.Data
         }
 
         public DbSet<PPVCustomer> PPVCustomers { get; set; }
+        public DbSet<CouponTypeFromDeno> CouponTypeFromDenos { get; set; }
     }
 }
