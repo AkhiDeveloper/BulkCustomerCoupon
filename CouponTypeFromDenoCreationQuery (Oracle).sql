@@ -11,6 +11,8 @@ MODIFY (Deno INT NOT NULL);
 ALTER TABLE CouponTypeFromDenos
 MODIFY (CouponType INT NOT NULL);
 
+ALTER TABLE tbl_rch_coupun_all ADD IS_COUPON_CREATED NUMBER(1,0);
+
 INSERT INTO CouponTypeFromDenos (Deno, CouponType)
 VALUES
   (1200, 1),

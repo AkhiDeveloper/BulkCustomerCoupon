@@ -22,6 +22,7 @@ namespace BulkCustomerCoupon.Console.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<PPVCustomer>().ToTable("tbl_rch_coupun_all");
             modelBuilder.Entity<PPVCustomer>().Property(p => p.CustomerId)
                 .HasColumnName("CUSTOMER_ID");
             modelBuilder.Entity<PPVCustomer>().Property(p => p.Deno)
