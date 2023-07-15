@@ -17,6 +17,7 @@ var isConnected = oracleDbContext.Database.CanConnect();
 if(!isConnected)
 {
     Console.WriteLine("Failed to connect with database.");
+    return;
 }
 IList<PPVCustomer> ppvCustomers = new List<PPVCustomer>();
 
