@@ -14,13 +14,13 @@ var serviceProvider = new ServiceCollection()
 var sqlServerDbContext = serviceProvider.GetService<SqlServerDbContext>();
 var oracleDbContext = serviceProvider.GetService<OracleDBContext>();
 
-var isConnected = oracleDbContext.Database.CanConnect();
+var isConnected = await oracleDbContext.Database.CanConnectAsync();
 if(!isConnected)
 {
     Console.WriteLine("Failed to connect with database.");
     return;
 }
-var x = oracleDbContext.CouponTypeFromDenos.ToList();
+//var x = oracleDbContext.CouponTypeFromDenos.ToList();
 IList<PPVCustomer> ppvCustomers = new List<PPVCustomer>();
 
 //var ppvCustomersGroup = await sqlServerDbContext.PPVCustomers.GroupBy(x => x.CustomerId).ToListAsync();
