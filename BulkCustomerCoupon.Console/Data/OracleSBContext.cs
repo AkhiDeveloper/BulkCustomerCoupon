@@ -32,6 +32,8 @@ namespace BulkCustomerCoupon.Console.Data
                 .HasColumnType("DATE");
             modelBuilder.Entity<PPVCustomer>().Property(p => p.IsCouponCreated)
                 .HasColumnName("IS_COUPON_CREATED");
+            modelBuilder.Entity<PPVCustomer>().Property(p => p.InvoicLineText)
+                .HasColumnName("INVOICE_LINE_TEXT");
             base.OnModelCreating(modelBuilder);
         }
 

@@ -15,6 +15,7 @@ namespace BulkCustomerCoupon.Console.Data.Models
         public string CustomerId { get; set; }
         public int Deno { get; set; }
         public DateTime CreatedDateTime { get; set; }
+        public string? InvoicLineText { get; set; }
         public bool? IsCouponCreated { get; set; }
     }
 }

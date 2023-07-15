@@ -24,7 +24,9 @@ IList<PPVCustomer> ppvCustomers = new List<PPVCustomer>();
 //var ppvCustomersGroup = await sqlServerDbContext.PPVCustomers.GroupBy(x => x.CustomerId).ToListAsync();
 
 var ppvCustomersGroup = await oracleDbContext.PPVCustomers
-    .FromSqlRaw("select * from tbl_rch_coupun_all where lower(INVOICE_LINE_TEXT) not like '%bonus%' and lower(INVOICE_LINE_TEXT) not like '%reverse%' ;")
+    //.FromSqlRaw("select * from tbl_rch_coupun_all where lower(INVOICE_LINE_TEXT) not like '%bonus%' and lower(INVOICE_LINE_TEXT) not like '%reverse%' ;")
+    .Where(x => !x.InvoicLineText.ToLower().Contains("bonus"))
+    .Where(x => !x.InvoicLineText.ToLower().Contains("reverse"))
     .OrderBy(x => x.CreatedDateTime)
     .GroupBy(x => x.CustomerId).ToListAsync();
 
