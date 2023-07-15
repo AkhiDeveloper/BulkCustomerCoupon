@@ -44,7 +44,8 @@ foreach (var group in ppvCustomersGroup)
 for (int i = 0; i < ppvCustomers.Count; i++)
 {
     var ppVCustomer = ppvCustomers[i];
-    var couponType = await sqlServerDbContext.CouponTypeFromDenos.Where(x => x.Deno == ppVCustomer.Deno).Select(x => x.CouponType).FirstOrDefaultAsync();
+    var couponType = await sqlServerDbContext.CouponTypeFromDenos.Where(x => x.Deno == ppVCustomer.Deno)
+        .Select(x => x.CouponType).FirstOrDefaultAsync();
     CouponAPIClient couponAPIClient = new CouponAPIClient();
     var isCreated = await couponAPIClient.CreatePPVCoupon(ppVCustomer.CustomerId, couponType);
     ppVCustomer.IsCouponCreated = isCreated;
