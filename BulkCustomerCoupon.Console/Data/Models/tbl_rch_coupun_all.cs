@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BulkCustomerCoupon.Console.Data.Models
 {
-    public class PPVCustomer
+    public class tbl_rch_coupun_all
     {
         [Key]
         public int Id { get; set; }
