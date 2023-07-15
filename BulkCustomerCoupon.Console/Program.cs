@@ -44,6 +44,6 @@ for (int i = 0; i < ppvCustomers.Count; i++)
     CouponAPIClient couponAPIClient = new CouponAPIClient();
     var isCreated = await couponAPIClient.CreatePPVCoupon(ppVCustomer.CustomerId, couponType);
     ppVCustomer.IsCouponCreated = isCreated;
-    await sqlServerDbContext.SaveChangesAsync();
+    await oracleDbContext.SaveChangesAsync();
 }
 
